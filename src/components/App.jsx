@@ -14,7 +14,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
-  const [imagesError, setImagesError] = useState(null);
+  const [error, setImagesError] = useState(null);
   const [showBtn, setShowBtn] = useState(false);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export const App = () => {
       {isLoading && <Loader />}
 
       {showBtn && <Button onClick={handleLoadMore}>Load More</Button>}
-
+      {error && <>Sorry. {error} ... 😭</>}
       {showModal && (
         <Modal largeImageURL={selectedImage} onClose={handleCloseModal} />
       )}

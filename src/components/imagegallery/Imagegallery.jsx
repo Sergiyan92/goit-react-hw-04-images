@@ -18,7 +18,7 @@ const ImageGallery = ({ images, onClick }) => {
   );
 };
 export default ImageGallery;
-// ImageGallery.propTypes = {
-//   images: PropTypes.array.isRequired,
-//   onClick: PropTypes.func.isRequired,
-// };
+ImageGallery.propTypes = {
+  images: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
